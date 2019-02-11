@@ -3,7 +3,8 @@ import './../css/App.css';
 import { firebaseDb } from './../firebase/index.js'
 import Message from './Message.js'
 import ChatBox from './ChatBox.js'
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+// import MuiThemeProvider from '/Users/sh3eys/git/study_react/node_modules/material-ui/styles/MuiThemeProvider';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 
 const messagesRef = firebaseDb.ref('messages')
 
@@ -21,10 +22,13 @@ class AppChat extends Component {
   }
 
   render() {
+    var hdivStyle = {
+      minHeight: '0'
+    };
     return (
       <MuiThemeProvider>
         <div className="App">
-          <div className="App-header">
+          <div className="App-header" style={hdivStyle}>
             <h2>Chat</h2>
           </div>
           <div className="MessageList">
